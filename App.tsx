@@ -1,30 +1,11 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+import Screens from './src/navigation';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SignIn from './screens/SignIn';
-import SignUp from './screens/SignUp';
-
-const App: React.FC = () => {
-  const Stack = createNativeStackNavigator();
-
+export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name='SignUp'
-          options={{ headerShown: false }}
-          component={SignUp}
-        />
-        {/* <Stack.Screen
-          options={{ headerShown: false }}
-          name='SignIn'
-          component={SignIn}
-        /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    <View style={{ flex: 1 }}>
+      <Screens />
+    </View>
   );
-};
-
-export default App;
+}
