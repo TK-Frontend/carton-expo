@@ -10,4 +10,3 @@ export { default as TipScreen } from './TipScreen';
 export { default as VipScreen } from './VipScreen';
 export { default as WorkProductivityScreen } from './WorkProductivityScreen';
 export { default as WorkSummaryScreen } from './WorkSummaryScreen';
-export { default as ZZZScreen } from './ZZZScreen';

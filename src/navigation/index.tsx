@@ -15,7 +15,6 @@ import {
   VipScreen,
   WorkProductivityScreen,
   WorkSummaryScreen,
-  ZZZScreen,
 } from '../screens';
 
 export type MainStackParamList = {
@@ -31,7 +30,6 @@ export type MainStackParamList = {
   VipScreen: undefined;
   WorkProductivityScreen: undefined;
   WorkSummaryScreen: undefined;
-  ZZZScreen: undefined;
 };
 
 const MainStack = createNativeStackNavigator<MainStackParamList>();
@@ -58,7 +56,6 @@ export default function Screens() {
         <MainStack.Screen name='SignupScreen' component={SignupScreen} />
         <MainStack.Screen name='TipScreen' component={TipScreen} />
         <MainStack.Screen name='VipScreen' component={VipScreen} />
-        <MainStack.Screen name='ZZZScreen' component={ZZZScreen} />
         <MainStack.Screen
           name='WorkProductivityScreen'
           component={WorkProductivityScreen}
