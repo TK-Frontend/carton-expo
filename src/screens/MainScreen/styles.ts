@@ -1,9 +1,12 @@
-import {StyleSheet} from 'react-native';
-import {RFValue} from 'react-native-responsive-fontsize';
-import {Colors} from '../../constans/colors';
+import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { Colors } from '../../constans/colors';
 
 const createStyles = () =>
   StyleSheet.create({
+    box: {
+      flex: 1,
+    },
     container: {
       flex: 1,
       justifyContent: 'center',
@@ -39,10 +42,10 @@ const createStyles = () =>
       paddingVertical: 10,
       marginTop: 5,
     },
-    buttonContainer: {width: '60%'},
-    textContainer: {alignItems: 'center'},
-    textLogin: {fontSize: 32},
-    textProductivity: {fontSize: 14},
+    buttonContainer: { width: '60%' },
+    textContainer: { alignItems: 'center' },
+    textLogin: { fontSize: 32 },
+    textProductivity: { fontSize: 14 },
   });
 
 export default createStyles;

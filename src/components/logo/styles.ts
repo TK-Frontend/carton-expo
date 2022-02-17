@@ -4,9 +4,8 @@ import { RFValue } from 'react-native-responsive-fontsize';
 const createStyles = () =>
   StyleSheet.create({
     imageContainer: {
-      position: 'absolute',
-      top: RFValue(100),
-      width: '65%',
+      marginVertical: RFValue(8),
+      width: '64%',
       justifyContent: 'center',
       alignItems: 'center',
     },

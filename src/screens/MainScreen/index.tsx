@@ -1,38 +1,28 @@
-import React, {useMemo} from 'react';
-import {KeyboardAvoidingView, TouchableOpacity, Text} from 'react-native';
-import {NavigationProp, ParamListBase} from '@react-navigation/native';
-import {signOut} from 'firebase/auth';
-import {auth} from '../../../firebase';
+import React, { useMemo } from 'react';
+import { View, Text } from 'react-native';
 import createStyles from './styles';
+import Logo from '../../components/logo';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Colors } from '../../constans/colors';
+import StartWork from './startWork';
+import { NavigationProp, ParamListBase } from '@react-navigation/native';
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 
-const MainScreen: React.FC<IProps> = ({navigation}) => {
+const MainScreen: React.FC<IProps> = ({ navigation }) => {
   const styles = useMemo(() => createStyles(), []);
 
-  const LogoutUser = () => {
-    signOut(auth)
-      .then(() => {
-        navigation.navigate('SigninScreen');
-      })
-      .catch(error => {
-        alert(error);
-      });
-  };
-
-  const user = auth.currentUser;
-  const email = user?.email;
-
   return (
-    <KeyboardAvoidingView style={styles.container}>
-      <Text style={styles.text}>MainScreen</Text>
-      <Text>username is: {email}</Text>
-      <TouchableOpacity style={styles.button} onPress={() => LogoutUser()}>
-        <Text style={styles.buttonText}>wyloguj</Text>
-      </TouchableOpacity>
-    </KeyboardAvoidingView>
+    <LinearGradient colors={Colors.GRADIENT_BLUE} style={styles.box}>
+      <View style={styles.container}>
+        <Logo />
+        <View>
+          <StartWork navigation={navigation} />
+        </View>
+      </View>
+    </LinearGradient>
   );
 };
 
