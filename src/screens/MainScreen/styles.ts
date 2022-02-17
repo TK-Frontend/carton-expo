@@ -1,51 +1,55 @@
-import { StyleSheet } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
-import { Colors } from '../../constans/colors';
+import { StyleSheet } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
+import { Colors } from "../../constans/colors";
 
 const createStyles = () =>
   StyleSheet.create({
     box: {
       flex: 1,
     },
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {
-      fontSize: RFValue(25),
-      fontWeight: '300',
-      color: Colors.BLACK,
-    },
     button: {
-      width: '100%',
-      backgroundColor: 'cadetblue',
+      width: "100%",
+      backgroundColor: "cadetblue",
       padding: 10,
       borderRadius: 15,
       marginTop: 20,
     },
+    buttonContainer: { width: "60%" },
     buttonText: {
-      color: 'white',
-      fontWeight: '700',
+      color: "white",
+      fontWeight: "700",
       fontSize: 16,
-      textAlign: 'center',
+      textAlign: "center",
+    },
+    container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
     },
 
-    inputContainer: {
-      width: '80%',
-      marginTop: 10,
+    text: {
+      fontSize: RFValue(24),
+      fontWeight: "300",
+      color: Colors.BLACK,
     },
-    input: {
-      backgroundColor: 'white',
-      borderRadius: 20,
-      paddingHorizontal: 10,
-      paddingVertical: 10,
-      marginTop: 5,
+    tile: { flexBasis: "100%" },
+    tileHalf: {
+      flexBasis: "48%",
     },
-    buttonContainer: { width: '60%' },
-    textContainer: { alignItems: 'center' },
-    textLogin: { fontSize: 32 },
-    textProductivity: { fontSize: 14 },
+    tilesHalfContainer: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      flexBasis: "100%",
+      flexWrap: "wrap",
+    },
+    tilesContainer: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      flexWrap: "wrap",
+      width: "88%",
+    },
   });
 
 export default createStyles;

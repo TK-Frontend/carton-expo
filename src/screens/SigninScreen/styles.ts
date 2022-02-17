@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { RFValue } from 'react-native-responsive-fontsize';
-import { Colors } from '../../constans/colors';
+import { StyleSheet } from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
+import { Colors } from "../../constans/colors";
 
 const createStyles = () =>
   StyleSheet.create({
@@ -8,27 +8,27 @@ const createStyles = () =>
       flex: 1,
     },
     button: {
-      width: '100%',
+      width: "100%",
       backgroundColor: Colors.GOLD,
       padding: RFValue(10),
       borderRadius: RFValue(15),
       color: Colors.WHITE,
       marginVertical: RFValue(6),
     },
-    buttonContainer: { width: '85%' },
+    buttonContainer: { width: "88%" },
     buttonText: {
       color: Colors.WHITE,
-      fontWeight: '700',
+      fontWeight: "700",
       fontSize: RFValue(16),
-      textAlign: 'center',
+      textAlign: "center",
     },
     container: {
       flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
+      justifyContent: "center",
+      alignItems: "center",
     },
     inputContainer: {
-      width: '85%',
+      width: "88%",
       marginTop: RFValue(25),
     },
     input: {
@@ -42,14 +42,14 @@ const createStyles = () =>
     },
     text: {
       fontSize: RFValue(14),
-      fontWeight: '300',
+      fontWeight: "300",
       marginBottom: RFValue(20),
-      textAlign: 'center',
+      textAlign: "center",
     },
-    textContainer: { alignItems: 'center' },
+    textContainer: { alignItems: "center" },
     textLink: {
       color: Colors.WHITE,
-      textAlign: 'center',
+      textAlign: "center",
       marginVertical: RFValue(10),
     },
     textLogin: { fontSize: RFValue(22), color: Colors.WHITE },

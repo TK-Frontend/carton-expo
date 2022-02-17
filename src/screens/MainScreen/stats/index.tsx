@@ -7,19 +7,19 @@ interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 
-const StartWork: React.FC<IProps> = ({ navigation }) => {
+const Stats: React.FC<IProps> = ({ navigation }) => {
   const styles = useMemo(() => createStyles(), []);
   return (
     <View style={styles.box}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("WorkProductivityScreen")}
+        onPress={() => navigation.navigate("StatisticsScreen")}
       >
-        <Text style={styles.textLink}>=== || ===</Text>
+        <Text style={styles.textLink}>.,iI</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>Zacznij zbierać</Text>
+      <Text style={styles.text}>Statystyki</Text>
     </View>
   );
 };
 
-export default StartWork;
+export default Stats;

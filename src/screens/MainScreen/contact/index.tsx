@@ -7,19 +7,19 @@ interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 
-const StartWork: React.FC<IProps> = ({ navigation }) => {
+const Contact: React.FC<IProps> = ({ navigation }) => {
   const styles = useMemo(() => createStyles(), []);
   return (
     <View style={styles.box}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("WorkProductivityScreen")}
+        onPress={() => navigation.navigate("ContactScreen")}
       >
-        <Text style={styles.textLink}>=== || ===</Text>
+        <Text style={styles.textLink}>() -- ()</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>Zacznij zbierać</Text>
+      <Text style={styles.text}>Kontakt</Text>
     </View>
   );
 };
 
-export default StartWork;
+export default Contact;
