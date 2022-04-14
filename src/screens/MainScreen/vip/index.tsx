@@ -4,20 +4,19 @@ import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import createStyles from "./styles";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "../../../constans/colors";
-
-import { STATISTICS } from "../../../assets/Images";
+import { THE_CROWN } from "../../../assets/Images";
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
 }
 
-const Stats: React.FC<IProps> = ({ navigation }) => {
+const Vip: React.FC<IProps> = ({ navigation }) => {
   const styles = useMemo(() => createStyles(), []);
   return (
     <View style={styles.box}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("StatisticsScreen")}
+        onPress={() => navigation.navigate("VipScreen")}
       >
         <View style={styles.gradientContainer}>
           <LinearGradient
@@ -25,14 +24,14 @@ const Stats: React.FC<IProps> = ({ navigation }) => {
             style={styles.gradientPadding}
           >
             <View style={styles.imageContainer}>
-              <Image style={styles.image} source={STATISTICS} />
+              <Image style={styles.image} source={THE_CROWN} />
             </View>
           </LinearGradient>
         </View>
       </TouchableOpacity>
-      <Text style={styles.text}>Statystyki</Text>
+      <Text style={styles.text}>VIP</Text>
     </View>
   );
 };
 
-export default Stats;
+export default Vip;

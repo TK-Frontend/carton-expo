@@ -5,26 +5,30 @@ import { Colors } from "../../../constans/colors";
 const createStyles = () =>
   StyleSheet.create({
     box: {
-      width: "100%",
+      height: RFValue(148),
+      marginBottom: RFValue(20),
     },
     button: {
-      width: "100%",
       backgroundColor: Colors.BLUE,
-      paddingVertical: RFValue(48),
+      paddingVertical: RFValue(32),
       borderRadius: RFValue(16),
       color: Colors.WHITE,
     },
+    image: {
+      height: "100%",
+      resizeMode: "contain",
+    },
+    imageContainer: {
+      height: "100%",
+      justifyContent: "center",
+      alignSelf: "center",
+    },
     text: {
-      fontSize: RFValue(14),
+      fontSize: RFValue(16),
       fontWeight: "300",
       marginBottom: RFValue(20),
       textAlign: "center",
       color: Colors.WHITE,
-    },
-    textLink: {
-      color: Colors.WHITE,
-      textAlign: "center",
-      marginVertical: RFValue(10),
     },
   });
 

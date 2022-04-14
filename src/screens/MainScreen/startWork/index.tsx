@@ -1,7 +1,10 @@
 import React, { useMemo } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
+import { COLLECT } from "../../../assets/Images";
 import createStyles from "./styles";
+import { Colors } from "../../../constans/colors";
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
@@ -10,12 +13,18 @@ interface IProps {
 const StartWork: React.FC<IProps> = ({ navigation }) => {
   const styles = useMemo(() => createStyles(), []);
   return (
-    <View style={styles.box}>
+    <View>
       <TouchableOpacity
-        style={styles.button}
         onPress={() => navigation.navigate("WorkProductivityScreen")}
       >
-        <Text style={styles.textLink}>=== || ===</Text>
+        <View style={styles.gradientContainer}>
+          <LinearGradient
+            colors={Colors.GRADIENT_LIGHT_BLUE}
+            style={styles.gradientPadding}
+          >
+            <Image style={styles.image} source={COLLECT} />
+          </LinearGradient>
+        </View>
       </TouchableOpacity>
       <Text style={styles.text}>Zacznij zbierać</Text>
     </View>

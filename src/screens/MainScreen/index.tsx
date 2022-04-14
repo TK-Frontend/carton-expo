@@ -1,14 +1,14 @@
 import React, { useMemo } from "react";
-import { View, Text } from "react-native";
-import createStyles from "./styles";
-import Logo from "../../components/logo";
+import { View } from "react-native";
+import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "../../constans/colors";
+import createStyles from "./styles";
+import Logo from "../../components/logo";
 import StartWork from "./startWork";
-import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import Settings from "./settings";
 import Stats from "./stats";
-import Tip from "./tip";
+import Vip from "./vip";
 import Contact from "./contact";
 
 interface IProps {
@@ -38,7 +38,7 @@ const MainScreen: React.FC<IProps> = ({ navigation }) => {
             </View>
 
             <View style={styles.tileHalf}>
-              <Tip navigation={navigation} />
+              <Vip navigation={navigation} />
             </View>
 
             <View style={styles.tileHalf}>

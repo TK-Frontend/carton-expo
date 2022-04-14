@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import { NavigationProp, ParamListBase } from "@react-navigation/native";
 import createStyles from "./styles";
+import { COIN } from "../../../assets/Images";
 
 interface IProps {
   navigation: NavigationProp<ParamListBase>;
@@ -15,7 +16,9 @@ const Tip: React.FC<IProps> = ({ navigation }) => {
         style={styles.button}
         onPress={() => navigation.navigate("TipScreen")}
       >
-        <Text style={styles.textLink}>$ $ $</Text>
+        <View style={styles.imageContainer}>
+          <Image style={styles.image} source={COIN} />
+        </View>
       </TouchableOpacity>
       <Text style={styles.text}>Zostaw napiwek</Text>
     </View>
